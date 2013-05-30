@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Chat</title>
+		<script src='jquery.min.js'></script>
+		<script>
+			$(function(){
+				$("#message").keypress(function(e){
+					if(e.which == 13){
+						$.post("http://localhost:8012/m",{message: $(this).val()});
+						$(this).val("");
+					}
+				});
+				function fetchMessage(){
+					$.get("http://localhost:8012/m", function(data){
+						$("#content").append(data);
+						fetchMessage();
+					});
+				}
+				fetchMessage();
+			});
+		</script>
+	</head>
+<body>
+	<div id="content"></div>
+	<input type="text" id="message"/>
+</body>
+</html>
