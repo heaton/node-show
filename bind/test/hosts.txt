@@ -1,0 +1,23 @@
+#UPDATE:2013-05-25 11:50
+
+127.0.0.1	localhost
+#SmartHosts START
+
+#YouTube START
+203.208.46.206	accounts.youtube.com
+203.208.46.206	apiblog.youtube.com
+#203.208.46.206	abc.youtube.com
+203.208.46.206	help.youtube.com
+203.208.46.206	i.ytimg.com
+203.208.46.206	i1.ytimg.com
+203.208.46.206	i2.ytimg.com
+203.208.46.206	i3.ytimg.com
+203.208.46.206	i4.ytimg.com
+203.208.46.206	insight.youtube.com
+203.208.46.206	m.youtube.com
+203.208.46.206	s.ytimg.com
+203.208.46.206	www.youtube.com
+203.208.46.206	ytimg.l.google.com
+#YouTube END
+
+#SmartHosts END
