@@ -3,6 +3,7 @@ var hosts = require('./hosts');
 
 var domains = new Array();
 file.read('domains.txt').eachLine(function(line){
+	if(line.startsWith('#')) return;
 	domains.push(line);
 });
 
