@@ -1,6 +1,8 @@
 var dns = require('../binddns');
 var file = require('../file');
 
+config = {dbFilePath : 'bind_file/'};
+
 function fetchHost(ip, name){
 	return {'ip': ip, 'name': name};
 }

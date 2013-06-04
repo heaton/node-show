@@ -3,8 +3,6 @@ var file = require('./file');
 require('./arrays');
 require('./strings');
 
-var path = 'bind_file/';
-
 function Dns(domain, hosts){
 	var base = this;
 	this.a = new Array();
@@ -35,9 +33,9 @@ function Dns(domain, hosts){
 		return re.join('\n');
 	}
 	this.writeDb = function(){
-		var tem = file.readAll('db.domain.tem');
+		var tem = file.readAll(__dirname + '/db.domain.tem');
 		var re = tem.replaceAll('\\$\\{domain\\}', domain).replaceAll('\\$\\{a\.list\\}', tranA(this.a));
-		var fileName = path + 'db.' + domain;
+		var fileName = global.config.dbFilePath + 'db.' + domain;
 		dns.resolve4(domain, function(err, addresses){
 			file.write(fileName, re.replaceAll('\\$\\{null\\}', addresses[0]));
 		});

@@ -1,6 +1,6 @@
 var hosts = require('../hosts');
 
-hosts.file('test/hosts.txt');
+hosts.file(__dirname + '/hosts.txt');
 
 exports.youtube = function(beforeExit, assert){
 	var dns = hosts.dns('youtube.com');

@@ -1,0 +1,6 @@
+{
+	"domains" : "domains.txt",
+	"hosts" : "hosts.txt",
+	"bindFile" : "bind_file/named.conf.gfw",
+	"dbFilePath" : "bind_file/"
+}

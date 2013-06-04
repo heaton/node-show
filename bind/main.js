@@ -1,13 +1,20 @@
 var file = require('./file');
 var hosts = require('./hosts');
 
+var configFile = 'main.json';
+if(process.argv.length > 2)
+	configFile = process.argv[2];
+
+var config = JSON.parse(file.readAll(configFile));
+global.config = config;
+
 var domains = new Array();
-file.read('domains.txt').eachLine(function(line){
+file.read(config.domains).eachLine(function(line){
 	if(line.startsWith('#')) return;
 	domains.push(line);
 });
 
-hosts.file('hosts.txt');
+hosts.file(config.hosts);
 var dnses = new Array();
 domains.forEach(function(domain){
 	dnses.push(hosts.dns(domain));
@@ -19,7 +26,5 @@ dnses.forEach(function(dns){
 	conf += dns.fetchConf();
 });
 
-file.write('bind_file/named.conf.gfw', conf);
+file.write(config.bindFile, conf);
 
-console.log('create file success');
-	
