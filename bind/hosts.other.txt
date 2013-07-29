@@ -1,0 +1,10 @@
+69.171.235.16   ect.channel.facebook.com
+69.171.235.16   0-ect.channel.facebook.com
+66.220.151.74   1-ect.channel.facebook.com
+66.220.151.74   2-ect.channel.facebook.com
+66.220.151.74   3-ect.channel.facebook.com
+203.208.46.206  s.youtube.com
+159.106.121.75	platform.twitter.com
+173.194.72.100	www-google-analytics.l.google.com
+173.194.127.254	ssl-google-analytics.l.google.com
+203.208.46.200  youtube-ui-china.l.google.com
